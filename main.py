@@ -307,7 +307,7 @@ async def help_command(ctx):
 with open("config.json", "r") as f:
     config = json.load(f)
 
-TOKEN = config["token"]
+TOKEN = os.getenv("TOKEN")
 ACCESS_ROLE = int(config["access_role"])
 
 intents = discord.Intents.all()
