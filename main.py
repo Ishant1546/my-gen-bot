@@ -10,7 +10,7 @@ init(autoreset=True)
 with open("config.json") as f:
     config = json.load(f)
 
-TOKEN = os.getenv("TOKEN"))
+TOKEN = os.getenv("TOKEN")
 VOUCH_CHANNEL = config.get("vouch_channel", "")
 VOUCH_FORMAT = config.get("vouch_format",
                           "+rep Legit got Working (Acc Name) Account")
