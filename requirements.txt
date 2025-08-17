@@ -1,5 +1,2 @@
-discord.py==2.3.2
-os
-json
+discord.py
 colorama
-Python 3.10 Version 64 Bit
