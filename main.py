@@ -270,7 +270,7 @@ async def timeout(ctx,
 async def help_command(ctx):
     embed = discord.Embed(title="✨ Command Guide - Acceleration Bot",
                           color=discord.Color.purple())
-    embed.add_field(name="**.stock** `Usage`",
+    embed.add_field(name="**!stock** `Usage`",
                     value="Displays available and out-of-stock categories.",
                     inline=False)
     embed.add_field(
