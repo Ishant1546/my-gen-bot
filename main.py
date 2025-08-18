@@ -22,7 +22,7 @@ if not TOKEN:
 
 VOUCH_CHANNEL = config.get("vouch_channel", "")
 VOUCH_FORMAT = config.get("vouch_format",
-                          "+rep Legit got Working (Acc Name) Account")
+                          "Legit Got Working (Acc Name) From @1402705693341122581")
 HITS_CHANNEL = config.get("hits_channel", "")
 RESTOCK_CHANNEL = config.get("restock_channel", "")
 PING_ROLE = config.get("ping_role", "")
@@ -31,7 +31,7 @@ ACCESS_ROLE = config.get("access_role", "")
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
-bot = commands.Bot(command_prefix=".", intents=intents, help_command=None)
+bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 
 stock_folder = "stock"
 os.makedirs(stock_folder, exist_ok=True)
