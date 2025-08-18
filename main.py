@@ -87,7 +87,7 @@ async def on_ready():
 async def stock(ctx):
     if not has_access(ctx):
         await ctx.send("**❌ You don't have permission.**")
-        log("ERROR", ".stock", ctx.author.name, "Missing access role")
+        log("ERROR", "!stock", ctx.author.name, "Missing access role")
         return
     embed = discord.Embed(title="📦 Stock - Services",
                           color=discord.Color.blue())
@@ -110,7 +110,7 @@ async def stock(ctx):
                     inline=False)
     embed.set_footer(text="Made By Ishant Sharma !")
     await ctx.send(embed=embed)
-    log("CMD", ".stock", ctx.author.name, "Checked stock")
+    log("CMD", "!stock", ctx.author.name, "Checked stock")
 
 
 @bot.command()
