@@ -76,7 +76,7 @@ async def on_ready():
        /    |    \  \__\  \__\  ___/|  |_\  ___/|  | \/ __ \|  | |  (  <_> )   |  \ \    \_\  \|        \/    |    \
        \____|__  /\___  >___  >___  >____/\___  >__|  (____  /__| |__|\____/|___|  /  \______  /_______  /\____|__  /
          \/     \/    \/    \/          \/           \/                    \/          \/        \/         \/
-                                       💥 Made by acceleration.back
+                                       💥 Made By Ishant Sharma !
          
 """ + Style.RESET_ALL)
     print(ascii_art)
@@ -108,7 +108,7 @@ async def stock(ctx):
     embed.add_field(name="❌ Out of Stock",
                     value=unavailable or "None",
                     inline=False)
-    embed.set_footer(text="Made by acceleration.back")
+    embed.set_footer(text="Made By Ishant Sharma !")
     await ctx.send(embed=embed)
     log("CMD", ".stock", ctx.author.name, "Checked stock")
 
@@ -300,7 +300,7 @@ async def help_command(ctx):
     embed.add_field(name="**.timeout <@user> <duration> <reason>** `Admin`",
                     value="Timeout user for 1h/1d/1w and notify.",
                     inline=False)
-    embed.set_footer(text="Made by acceleration.back ✨ Best UI Experience")
+    embed.set_footer(text="Made By Ishant Sharma !")
     await ctx.send(embed=embed)
 
 # Load config.json
@@ -358,26 +358,26 @@ async def status_checker():
                     embed = discord.Embed(
                         title="🎉 Access Unlocked!",
                         description=(
-                            "Thanks for supporting **our server** 💖\n"
-                            "You now have full access to exclusive perks!"
+                            "Thanks For Supporting **Our Server** 💖\n"
+                            "You Now Have Full Access To Exclusive Perks!"
                         ),
                         color=discord.Color.green()
                     )
                     embed.add_field(name="🔑 Requirement", value=f"```{REQUIRED_TEXT}```", inline=False)
-                    embed.set_footer(text="Enjoy your new benefits!")
+                    embed.set_footer(text="Enjoy Your New Benefits!")
                     try:
                         await member.send(embed=embed)
                     except:
                         print(f"⚠️ Couldn’t DM {member}")
             else:
                 if role in member.roles:
-                    await member.remove_roles(role, reason="Status/Bio removed")
+                    await member.remove_roles(role, reason="Status/Bio Removed")
                     print(f"❌ Removed {role.name} from {member}")
 
                     # DM removal message
                     embed = discord.Embed(
                         title="❌ Access Removed",
-                        description="Your status/bio no longer matches the requirement.",
+                        description="Your Status/Bio No Longer Matches The Requirement.",
                         color=discord.Color.red()
                     )
                     embed.add_field(name="Set It Back To:", value=f"```{REQUIRED_TEXT}```", inline=False)
@@ -392,32 +392,32 @@ async def checkstatus(ctx, member: discord.Member = None):
     """Check a user's status/bio manually"""
     member = member or ctx.author
     if has_required_status_or_bio(member):
-        await ctx.send(f"✅ {member.mention} has the correct status/bio!")
+        await ctx.send(f"✅ {member.mention} Has The Correct Status/Bio!")
     else:
-        await ctx.send(f"❌ {member.mention} does NOT have the correct status/bio.")
+        await ctx.send(f"❌ {member.mention} Does Not Have The Correct Status/Bio.")
 
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def forcecheck(ctx):
     """Force re-check all members immediately"""
     await status_checker()
-    await ctx.send("🔄 Re-checked all members for status/bio.")
+    await ctx.send("🔄 Re-Checked All Members For Status/Bio.")
 
 @bot.command()
 async def helpmenu(ctx):
     """Custom Help Menu"""
     embed = discord.Embed(
         title="🤖 Status Checker Bot Help",
-        description="Thanks for using our status system 💎",
+        description="Thanks For Using Our Status System 💎",
         color=discord.Color.blurple()
     )
     embed.add_field(name="📌 Commands", value="""
-`!checkstatus [user]` → Check if a user has the required status/bio  
-`!forcecheck` → Re-check all members manually  
-`!helpmenu` → Show this help menu  
+`!checkstatus [user]` → Check If a User Has The Required Status/Bio ! 
+`!forcecheck` → Re-Check All Members Manually  
+`!helpmenu` → Show This Help Menu  
     """, inline=False)
     embed.add_field(name="📋 Requirement", value=f"```{REQUIRED_TEXT}```", inline=False)
-    embed.set_footer(text="Made with ❤️ for our server")
+    embed.set_footer(text="Made With ❤️ For Our Server")
     await ctx.send(embed=embed)
 
 bot.run(TOKEN)
